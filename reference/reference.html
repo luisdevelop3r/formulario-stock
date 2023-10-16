@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="form-section">
+        <div class="form-wrapper">
+          <div class="aside-wrapper">
+            <div class="container">
+              <div class="aside">
+                <div class="steps">
+                  <div class="step active" aria-label="1">
+                    <p>1</p>
+                    <div class="tree">
+                      <span>STEP 1</span>
+                      <h2>YOUR INFO</h2>
+                    </div>
+                  </div>
+                  <div class="step false" aria-label="2">
+                    <p>2</p>
+                    <div class="tree">
+                      <span>STEP 2</span>
+                      <h2>SELECT PLAN</h2>
+                    </div>
+                  </div>
+                  <div class="step false" aria-label="3">
+                    <p>3</p>
+                    <div class="tree">
+                      <span>STEP 3</span>
+                      <h2>ADD-ONS</h2>
+                    </div>
+                  </div>
+                  <div class="step false false" aria-label="4">
+                    <p>4</p>
+                    <div class="tree">
+                      <span>STEP 4</span>
+                      <h2>SUMMARY</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="provide-details">
+              <h1>Personal info</h1>
+              <p>Please provide your name, email address, and phone number.</p>
+              <form id="myForm">
+                <label for="name">
+                  <p>Name</p>
+                  <p class="error-desktop"></p>
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="e.g Kamasah Dickson"
+                  value=""
+                />
+                <label for="email">
+                  <p>Email address</p>
+                  <p class="error-desktop"></p>
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="e.g kamasahdickson19@gmail.com"
+                  value=""
+                />
+                <label for="phone">
+                  <p>phone nummber</p>
+                  <p class="error-desktop"></p>
+                </label>
+                <input
+                  id="phone"
+                  type="text"
+                  name="phone"
+                  placeholder="e.g +233594571065"
+                  value=""
+                />
+              </form>
+              <div class="desktop-move-forward">
+                <div class="container" style="justify-content: space-between">
+                  <button class="forward" type="submit" form="myForm">
+                    Next step
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form move-forward">
+            <div class="container" style="justify-content: space-between">
+              <button class="forward" type="submit" form="myForm">
+                Next step
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
