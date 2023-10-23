@@ -2,6 +2,9 @@ import { useContext } from "react"
 import { FormContext } from '../../../Context/Context';
 import { NextStep } from '../../StepHandle/NextStep'
 import { BackStep } from '../../StepHandle/BackStep'
+import iconArcade from '../../../assets/images/icon-arcade.svg'
+import iconAdvanced from '../../../assets/images/icon-advanced.svg'
+import iconPro from '../../../assets/images/icon-pro.svg'
 
 function SelectPlan() {
     const context = useContext(FormContext);
@@ -20,7 +23,7 @@ function SelectPlan() {
 
                     <div onClick={() => context.setPlan("arcade")} className={`w-full h-[61.333333%] flex flex-col p-[0.9375rem] rounded-lg plan items-start text-left justify-between !mt-0
                     ${context.plan == "arcade" ? 'bg-[#f8f9fe] border-[#5145f4]' : ''}`}>
-                        <img src="/src/assets/images/icon-arcade.svg" alt="" />
+                        <img src={iconArcade} alt="" />
                         <div>
                             <h2 className='font-medium text-lg'>Arcade</h2>
                             <p>${context.arcade}{receiptPlan}</p>
@@ -29,7 +32,7 @@ function SelectPlan() {
 
                     <div onClick={() => context.setPlan("advanced")} className={`w-full h-[61.333333%] flex flex-col p-[0.9375rem] rounded-lg plan items-start text-left justify-between ml-[0.7rem] !mt-0
                     ${context.plan == "advanced" ? 'bg-[#f8f9fe] border-[#5145f4]' : ''}`}>
-                        <img src="/src/assets/images/icon-advanced.svg" alt="" />
+                        <img src={iconAdvanced} alt="" />
                         <div>
                             <h2 className='font-medium text-lg'>Advanced</h2>
                             <p>${context.advanced}{receiptPlan}</p>
@@ -38,7 +41,7 @@ function SelectPlan() {
 
                     <div onClick={() => context.setPlan("pro")} className={`w-full h-[61.333333%] flex flex-col p-[0.9375rem] rounded-lg plan items-start text-left justify-between ml-[0.7rem] !mt-0
                     ${context.plan == "pro" ? 'bg-[#f8f9fe] border-[#5145f4]' : ''}`}>
-                        <img src="/src/assets/images/icon-pro.svg" alt="" />
+                        <img src={iconPro} alt="" />
                         <div>
                             <h2 className='font-medium text-lg'>Pro</h2>
                             <p>${context.pro}{receiptPlan}</p>
