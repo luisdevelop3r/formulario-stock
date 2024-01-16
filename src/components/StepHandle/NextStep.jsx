@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { FormContext } from '../../Context/Context';
 
+
 function NextStep() {
     const context = useContext(FormContext);
     function validateSteps(step) {
@@ -18,7 +19,7 @@ function NextStep() {
 
 
     return (
-        <div className={`container2 fixiado2 ${context.step == 4 ? 'hidden' : ''}  ${context.step == 5 ? 'hidden' : ''}`} >
+        <div className={`container2 ${context.step == 1 ? 'fixiado2':''}fixiado2 ${context.step == 4 ? 'hidden' : ''}  ${context.step == 5 ? 'hidden' : ''}`} >
             <button className="NextStepButton" form="myForm" onClick={() => validateSteps(context.step)}>
                 Next step
             </button>

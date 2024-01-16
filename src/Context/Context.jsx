@@ -42,6 +42,8 @@ export const FormProvider = ({ children }) => {
         if (name.length >= 3 && validarEmail(email) && phone.length >= 9) {
             setStep(step + 1);
             setCrowdedFields([{ name: false }, { email: false }, { phone: false }])
+            setApplyChanges(false)
+            return;
         }
         setApplyChanges(true)
     }
@@ -117,7 +119,7 @@ export const FormProvider = ({ children }) => {
         let updatedPro = 15;
 
         if (suscriptionTime) {
-            updatedArcade = 6;
+            updatedArcade = 9;
             updatedAdvanced = 12;
             updatedPro = 15;
             setArcade(updatedArcade);
